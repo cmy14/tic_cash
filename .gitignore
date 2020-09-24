@@ -1,13 +1,30 @@
+# User-specific configurations
 *.iml
-.gradle
-/local.properties
-/.idea/caches
 /.idea/libraries
 /.idea/modules.xml
 /.idea/workspace.xml
+
+# Grade generated files
+.gradle/
+
+# Local configuration file (sdk path, etc)
+/local.properties
+
+# Android Studio 3 in .gitignore file
+/.idea/caches
+
+# Keep position of elements in Navigation Editor
 /.idea/navEditor.xml
+
+# Store last icon added with the Android Studio Wizard
 /.idea/assetWizardSettings.xml
+
+# OS-specific files
 .DS_Store
+
+# Build application files
 /build
+
+# misc
 /captures
 .externalNativeBuild
