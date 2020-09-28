@@ -18,6 +18,9 @@ abstract class Places {
         this.price = price
     }
      fun  reserver(): Boolean{
+         if (this.avail==true)
+         {this.avail= false;}
+         else{ return false  }
           return true
      }
 
