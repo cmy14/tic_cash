@@ -3,6 +3,7 @@ package com.cmy.tic_cash_android.entite
 import java.util.*
 
 class Order {
+
     var ido:Int
     set(value) {this.ido = value}
     get() = this.ido
@@ -38,7 +39,10 @@ class Order {
              fun addItems(items :List<Items>){
                 items.forEach {  this.addItem(it)}
              }
-             fun payer ( ){}
+             fun payer ( ):Double? {
+                 var result : Double? = Listitems?.sumByDouble{ it.prix * it.quantité }
+                return  result
+            }
             fun envoyer_facture(
               
                 // create pdf et sens mail
