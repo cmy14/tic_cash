@@ -1,11 +1,10 @@
 package com.cmy.tic_cash_android.entite
 
-class Food : Items{
-     var recette :MutableList<String>
-    set(value){ recette = value }
-    get() = recette
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 
-    constructor(prix : Double, name : String , quantité : Int): super(prix , name , quantité ) {
-        recette = ArrayList()
-}
+@Entity
+class Food(@PrimaryKey(autoGenerate = true)   override var id :Int ,   override var name : String,  override var prix:Double,  override var quantité : Int ): Items(  ) {
+
+
 }

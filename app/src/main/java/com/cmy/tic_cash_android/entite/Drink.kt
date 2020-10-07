@@ -1,13 +1,10 @@
 package com.cmy.tic_cash_android.entite
 
-class Drink: Items {
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 
-    var alcool : Boolean
-    set(value) {this.alcool=value}
-    get() = alcool
+@Entity
+data class Drink(@PrimaryKey   override var id :Int ,     override var name : String,  override var prix:Double,  override var quantité : Int ): Items(  ) {
 
-    constructor(prix : Double, name : String , quantité : Int): super(prix , name , quantité )
-    {
-        this.alcool =false
-    }
+
 }

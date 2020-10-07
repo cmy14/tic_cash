@@ -1,11 +1,8 @@
 package com.cmy.tic_cash_android.entite
 
-class Room : Places {
-var state : Boolean
-    set(value) {this.state = value}
-     get() =this.state
+import androidx.room.Entity
+import androidx.room.Ignore
+import androidx.room.PrimaryKey
 
-    constructor(id: Int, avail: Boolean, price: Float ,statr:Boolean ): super(id, avail, price){
-        this.state = statr
-    }
-}
+@Entity
+data class Room (  @PrimaryKey (autoGenerate = true )  override var id : Int, override var avail : Boolean,  override var price : Float, var state : Boolean): Places(){}

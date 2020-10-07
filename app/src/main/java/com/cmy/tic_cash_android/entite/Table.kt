@@ -1,15 +1,10 @@
 package com.cmy.tic_cash_android.entite
 
-class Table: Places {
+import androidx.room.Ignore
+import androidx.room.PrimaryKey
 
-    var nbplace : Int
-    set(value) { this.nbplace= value}
-    get() = this.nbplace
-    constructor (id: Int, avail: Boolean, price: Float, nbplace: Int): super(id, avail, price){
-        this.nbplace= nbplace
-
-    }
+data class Table (@PrimaryKey(autoGenerate = true )  override var id : Int, override var avail : Boolean, override var price : Float,     var nbplace : Int): Places(){}
 
 
 
-}
+
